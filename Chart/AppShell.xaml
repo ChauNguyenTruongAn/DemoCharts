@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Chart.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Chart"
+    xmlns:views="clr-namespace:Chart.Views"
+    Title="Chart">
+
+    <FlyoutItem Title="Home">
+        <Tab Title="Chart" Route="news">
+            <ShellContent Title="Chart" Route="bar" ContentTemplate="{DataTemplate views:LiveChart}" />
+            <ShellContent Title="Result" Route="line" ContentTemplate="{DataTemplate views:Barchart}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings">
+        <ShellContent Title="Settings">
+            <ContentPage Title="Settings" />
+        </ShellContent>
+    </FlyoutItem>
+
+    <ShellContent Title="About">
+        <ContentPage Title="About" />
+    </ShellContent>
+
+</Shell>

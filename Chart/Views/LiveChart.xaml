@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Chart.ViewModels"
+             x:Class="Chart.Views.LiveChart"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui">
+
+    <ContentPage.BindingContext>
+        <local:Charts/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" Padding="10">
+            <VerticalStackLayout Spacing="10">
+                
+                <lvc:CartesianChart HeightRequest="200" VerticalOptions="FillAndExpand"
+                                Series="{Binding Series1}"
+                                ZoomMode="X" />
+
+                <lvc:CartesianChart VerticalOptions="FillAndExpand" HeightRequest="200" 
+                                Series="{Binding Series2}"
+                                ZoomMode="X" />
+
+                <lvc:CartesianChart VerticalOptions="FillAndExpand" HeightRequest="200" 
+                                Series="{Binding Series3}"
+                                ZoomMode="X"/>
+
+                <lvc:CartesianChart VerticalOptions="FillAndExpand" HeightRequest="200" 
+                                Series="{Binding Series4}"
+                                ZoomMode="X"/>
+
+                <lvc:CartesianChart VerticalOptions="FillAndExpand" HeightRequest="200" 
+                                Series="{Binding Series3}"
+                                ZoomMode="X"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
